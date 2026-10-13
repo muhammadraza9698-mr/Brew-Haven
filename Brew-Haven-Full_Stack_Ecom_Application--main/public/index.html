@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew Haven — Artisan Coffee &amp; Beverages</title>
+  <meta name="description" content="Brew Haven — discover our hand-crafted artisan coffee menu. Login to add and manage items." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Toast container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar hidden">
+    <div class="nav-inner">
+      <a href="#/menu" class="nav-brand">Brew Haven</a>
+      <div class="nav-links">
+        <a href="#/menu" class="nav-link" id="navMenu">Menu</a>
+        <a href="#/cart" class="nav-link" id="navCart">Cart</a>
+        <a href="#/checkout" class="nav-link" id="navCheckout">Checkout</a>
+        <a href="#/orders" class="nav-link hidden" id="navOrders">View orders</a>
+        <span class="nav-user" id="navUser"></span>
+        <button class="nav-btn" id="navLogout">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SPA Router Outlet -->
+  <div id="app"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

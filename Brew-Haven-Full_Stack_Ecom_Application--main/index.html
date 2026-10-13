@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Coffee Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Brew Haven</h1>
+            <p>Artisan Coffee & Beverages</p>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="searchBox" class="search-box" placeholder=" Search for your favorite coffee...">
+            
+            <button class="toggle-form-btn" id="toggleFormBtn">➕ Add New Item</button>
+            
+            <div id="addItemForm" class="add-item-form hidden">
+                <h3>Add New Menu Item</h3>
+                <form id="menuForm">
+                    <div class="form-group">
+                        <label for="itemName">Name *</label>
+                        <input type="text" id="itemName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Price ($) *</label>
+                        <input type="number" id="itemPrice" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Description *</label>
+                        <textarea id="itemDescription" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Add to Menu</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="menuContainer" class="menu-grid"></div>
+        <div id="noResults" class="no-results hidden">No items found matching your search.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
